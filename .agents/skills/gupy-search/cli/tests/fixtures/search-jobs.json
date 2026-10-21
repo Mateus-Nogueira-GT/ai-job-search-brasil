@@ -1,0 +1,81 @@
+{
+ "data": [
+  {
+   "id": 12737911,
+   "name": "Analista Automação RPA Pleno (Power Automate e Python)",
+   "applicationDeadline": "2026-11-06T00:00:00.000Z",
+   "description": "No Grupo Stefanini, acreditamos no poder da colaboração. Co-criamos soluções inovadoras em parceria com nossos clientes, combinando tecnologia de ponta, inteligência artificial e a criatividade humana. Estamos na vanguarda da resolução de problemas de negócios, proporcionando impacto real em escala ",
+   "careerPageName": "Stefanini Group",
+   "careerPageLogo": "https://attachments.gupy.io/production/companies/39703/career/84556/images/2024-10-08_17-35_companyLogoUrl.png",
+   "careerPageUrl": "",
+   "type": "vacancy_type_effective",
+   "publishedDate": "2026-10-19T17:44:53.878Z",
+   "workplaceType": "remote",
+   "city": "",
+   "state": "",
+   "jobUrl": "https://stefanini.gupy.io/job/eyJqb2JJZCI6MTI3Mzc5MTEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+   "badges": {
+    "friendlyBadge": true,
+    "isPWD": true
+   },
+   "disabilities": true
+  },
+  {
+   "id": 12702692,
+   "name": "Pessoa Desenvolvedora Backend Python Especialista I - Venda Direta ",
+   "applicationDeadline": "2026-11-18T00:00:00.000Z",
+   "description": "Um dos maiores grupos de beleza do mundo, o Grupo Boticário é uma empresa brasileira presente em mais de 40 países. É dono das marcas O Boticário, Eudora, Quem Disse, Berenice?, Vult, O.U.i, Dr. JONES, Tô.que.tô, TRUSS, e do marketplace Beleza na Web, além de atuar com produtos licenciados como Aust",
+   "careerPageName": "Grupo Boticário",
+   "careerPageLogo": "https://attachments.gupy.io/production/companies/295/career/210/images/2025-05-20_20-25_companyLogoUrl.png",
+   "careerPageUrl": "",
+   "type": "vacancy_type_effective",
+   "publishedDate": "2026-10-16T17:18:32.626Z",
+   "workplaceType": "remote",
+   "city": "",
+   "state": "",
+   "jobUrl": "https://grupoboticario.gupy.io/job/eyJqb2JJZCI6MTI3MDI2OTIsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+   "disabilities": true
+  },
+  {
+   "id": 12729685,
+   "name": "Engenheiro(a) de IA Sênior — Python e Agentes (LangGraph)",
+   "applicationDeadline": "2026-11-16T00:00:00.000Z",
+   "description": "Já pensou em fazer parte do Time de Tecnologia da GestãoDS?Estamos sempre&nbsp;Expandindo, Dominando e Avançando, e para isso buscamos os melhores talentos para&nbsp;comporem a nossa parede de escudos.Venha fazer parte do nosso Time!A GestãoDS desenvolve software de gestão para clínicas e consultóri",
+   "careerPageName": "GestãoDS",
+   "careerPageLogo": "https://attachments.gupy.io/production/companies/34194/career/76141/images/2022-06-29_19-45_logo.png",
+   "careerPageUrl": "",
+   "type": "vacancy_legal_entity",
+   "publishedDate": "2026-10-15T12:56:45.106Z",
+   "workplaceType": "remote",
+   "city": "",
+   "state": "",
+   "jobUrl": "https://vempragestaods.gupy.io/job/eyJqb2JJZCI6MTI3Mjk2ODUsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+   "badges": {
+    "friendlyBadge": true,
+    "isPWD": false
+   },
+   "disabilities": false
+  },
+  {
+   "id": 12670391,
+   "name": "Engenharia de Software Backend Python/Java Sr | Comunidade de Dados ",
+   "applicationDeadline": "2026-12-31T00:00:00.000Z",
+   "description": "\nSobre o Itaú UnibancoO Itaú é a marca mais valiosa do Brasil, a melhor empresa para trabalhar segundo o Great Place to Work e o maior banco da América Latina. Nós impactamos diariamente mais de 98 milhões de clientes em 18 países.Somos feitos de pessoas e acreditamos que ter um time com pluralidade",
+   "careerPageName": "Itaú Unibanco",
+   "careerPageLogo": "https://attachments.gupy.io/production/companies/2022/career/3759/images/2024-03-18_20-11_companyLogoUrl.png",
+   "careerPageUrl": "",
+   "type": "vacancy_type_effective",
+   "publishedDate": "2026-10-14T20:22:56.166Z",
+   "workplaceType": "on-site",
+   "city": "São Paulo",
+   "state": "São Paulo",
+   "jobUrl": "https://vemproitau.gupy.io/job/eyJqb2JJZCI6MTI2NzAzOTEsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=?jobBoardSource=gupy_portal",
+   "disabilities": false
+  }
+ ],
+ "pagination": {
+  "total": 24,
+  "limit": 4,
+  "offset": 0
+ }
+}

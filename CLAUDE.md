@@ -83,7 +83,9 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
+automatically from your Languages table above - don't duplicate them here.
+Brazil: list hiring regimes you won't accept (e.g. "Não aceito PJ", "Só CLT") and your
+minimum gross (CLT) / minimum invoice (PJ); see 10-mercado-brasileiro.md. -->
 - [DEALBREAKER_1]
 - [DEALBREAKER_2]
 
@@ -127,7 +129,8 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] No LaTeX syntax errors (balanced braces, correct commands)
 - [ ] No spelling or grammar errors
 - [ ] Agentic coding / AI tooling references mention **Claude Code** by name
-- [ ] Cover letter is addressed to the correct person (or "Dear Hiring Manager" if unknown)
+- [ ] Cover letter is addressed to the correct person (or "Dear Hiring Manager" / "Prezada equipe de Recrutamento" if unknown)
+- [ ] Brazilian CV: no CPF, RG, photo, marital status, age or full street address; city/UF and +55 phone only (see `10-mercado-brasileiro.md` §5)
 - [ ] Cover letter fits approximately one page
 - [ ] CV section headings (`\section{...}`) and the References boilerplate line match the CV's language, not left as the English template defaults (see `05-cv-templates.md`)
 

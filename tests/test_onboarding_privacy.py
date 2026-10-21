@@ -33,12 +33,13 @@ class TestForkWarningsAtTheDecisionPoint(unittest.TestCase):
     def assert_warns(self, body: str, where: str):
         self.assertRegex(
             body,
-            re.compile(r"public", re.IGNORECASE),
+            re.compile(r"public|públic", re.IGNORECASE),
             f"{where}'s fork section must say the fork will be public",
         )
-        self.assertIn(
-            "personal data",
+        # The Brazilian adaptation's README.md is in Portuguese ("dados pessoais").
+        self.assertRegex(
             body,
+            re.compile(r"personal data|dados pessoais", re.IGNORECASE),
             f"{where}'s fork section must say /setup writes personal data into tracked files",
         )
         self.assertRegex(
@@ -48,7 +49,7 @@ class TestForkWarningsAtTheDecisionPoint(unittest.TestCase):
         )
 
     def test_readme_quick_start_warns_next_to_the_fork_command(self):
-        body = section(README.read_text(encoding="utf-8"), "### 1. Fork and clone")
+        body = section(README.read_text(encoding="utf-8"), "### 1. Faça sua cópia")
         self.assertIn("gh repo fork", body, "sanity: the fork command lives in this section")
         self.assert_warns(body, "README")
 

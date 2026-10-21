@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.0
+framework_version: 1.1.0
 ---
 
 # Interview Preparation Guide
@@ -101,6 +101,10 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 - When you receive any update (interview invitation, rejection, or status update), send a brief thank-you message
 - Express appreciation for their time and the process
 - Keep it short (2-3 sentences)
+
+## Brazilian Selection Processes
+
+For Brazilian employers, prepare for the stages in `10-mercado-brasileiro.md` §8 - asynchronous video screening (Gupy "Entrevista Inteligente"), behavioral/logic tests, group dynamics for trainee/internship programs - and add its questions about regime, PLR, hybrid policy and salary review date to the list above. A Gupy posting's `detail` output lists its actual stages in `steps`.
 
 ## Roleplay Guidelines
 When the user asks for interview practice:

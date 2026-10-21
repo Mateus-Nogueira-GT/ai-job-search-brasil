@@ -1,5 +1,5 @@
 ---
-framework_version: 1.2.7
+framework_version: 1.3.0
 ---
 
 # Job Evaluation Framework
@@ -29,6 +29,10 @@ Read the posting's eligibility / work rights / "who can apply" section **verbati
 If the candidate's permit also constrains *hours* or *start date* (a student visa with a term-time cap, a permit that begins on graduation), record that as a second gate under this section during `/setup`, with the specific dates. Do not merge it with the eligibility question above — they fail for different reasons and need different answers.
 
 A role that fails this gate is not scored and not drafted. Everything below applies only to roles that pass it.
+
+## Brazilian postings — regime and affirmative-vacancy gates
+
+For a posting in Brazil, run the **Regime Gate** (`10-mercado-brasileiro.md` §1: a regime the candidate lists as a deal-breaker is FAIL, an unstated regime is FLAG) and the **affirmative-vacancy rule** (§9: a vacancy *exclusive* to a group the candidate has not declared in CLAUDE.md is an Eligibility FAIL - never infer membership) alongside the gates here, and check the §9 scam signals before investing in a draft. Report the regime in the evaluation table's Location & Logistics row.
 
 ## Language Gate — run before scoring
 
@@ -146,6 +150,8 @@ Interpret results relative to the baseline defined in the data file's metadata. 
 
 If the salary tool is not configured, skip this section.
 
+**Brazil:** whether or not `salary_data.json` exists, put the offer on an annual after-tax footing with `python3 tools/clt_pj.py` (`clt <bruto>`, `pj <faturamento>`, or `equivalente <bruto CLT>` to show the PJ break-even), and when the posting shows a range (VAGAS.com.br `detail` returns `salary`) compare it with the candidate's minimum. See `10-mercado-brasileiro.md` §2 for benchmark sources.
+
 ## Output Format
 
 Present the evaluation as:
@@ -176,7 +182,7 @@ Present the evaluation as:
 
 ### Company Research Checklist
 - [ ] Checked company website (mission, values, recent news)
-- [ ] Checked review sites (Glassdoor, Jobindex, etc.)
+- [ ] Checked review sites (Glassdoor, Indeed company reviews, your market's equivalents)
 - [ ] Checked LinkedIn for team size, recent hires, connections
 - [ ] Checked media for restructuring, growth, or workplace issues
 - [ ] Identified network contacts who may know the team/manager

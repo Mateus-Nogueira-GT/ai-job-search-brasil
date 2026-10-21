@@ -4,11 +4,33 @@
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; the Brazilian `gupy-search` and `vagas-search`, the Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
 
 The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
 
 **Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+
+## Brazil (pre-filled for this fork - adjust or delete if your market is elsewhere)
+
+CLIs: `gupy-search` (pass `--state <UF>` / `--city` and a separate `--remote remoto` query - remote Gupy postings carry no city), `vagas-search` (literal matching: use root terms such as `contabil`, `administrativo`; ~40 results per query), `linkedin-search` (`-l "Brasil"` or `-l "São Paulo, Brazil"`).
+
+WebSearch fallbacks for boards without a CLI:
+
+```
+site:catho.com.br "[CARGO]" [CIDADE]
+site:infojobs.com.br "[CARGO]" [CIDADE]
+site:br.indeed.com "[CARGO]" [CIDADE]
+site:programathor.com.br "[TECNOLOGIA]"
+site:remotar.com.br "[CARGO]"
+site:trampos.co "[CARGO]"
+site:inhire.app "[CARGO]"
+site:vagas.solides.com.br "[CARGO]"
+site:gupy.io "[CARGO]" "[EMPRESA-ALVO]"
+```
+
+Write categories in Portuguese **and** English (multinationals post in English): "Cientista de Dados" + "Data Scientist", "Analista de Dados" + "Data Analyst", "Pessoa Desenvolvedora Backend" / "Desenvolvedor(a) Backend" + "Backend Developer". Search the function's root ("desenvolvedor", "dados", "contabil") as well as full titles - Brazilian titles add seniority suffixes (Jr/Pl/Sr, I/II/III) and gendered forms that break exact matches.
+
+Location tiers: define them by metro area (e.g. *Grande São Paulo*: São Paulo, Guarulhos, Osasco, ABC; *Campinas e região*) and by realistic commute time, since a same-city commute can exceed an hour each way.
 
 ## Search Sites
 

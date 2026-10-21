@@ -12,7 +12,7 @@ instructions on the expected format and how to convert from Excel.
 
 Usage:
     python salary_lookup.py "Company Name"
-    python salary_lookup.py "Company Name" --city "København"
+    python salary_lookup.py "Company Name" --city "São Paulo"
     python salary_lookup.py "Company Name" --json
     python salary_lookup.py --list-all
 """
@@ -35,6 +35,11 @@ SPELLING_VARIANTS = {
 
 # Legal suffixes and noise to strip when matching company names
 STRIP_PATTERNS = [
+    # Brazil: "Itaú Unibanco S.A.", "Natura &Co Ltda", "Acme Tecnologia EIRELI",
+    # "Fulano ME"/"EPP", "Siemens do Brasil". S/A and ME/EPP only at the end of
+    # the name, where they are unambiguous.
+    r"\bltda\.?", r"\beireli\b", r"\bs\.?\s*/?\s*a\.?\s*$", r"\b(?:me|epp)\s*$",
+    r"\bdo brasil\b", r"\bbrasil\b", r"\bbrazil\b",
     r"\ba/s\b", r"\baps\b", r"\bi/s\b", r"\bp/s\b", r"\bk/s\b",
     r"\bivs\b", r"\bamba\b", r"\ba\.m\.b\.a\.?\b",
     r"\(vg\)", r"\(.*?\)",  # (VG) and other parentheticals

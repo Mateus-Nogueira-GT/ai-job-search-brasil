@@ -15,6 +15,24 @@ per-file diff commands.
 
 ### Added
 
+- **Brazilian market adaptation** - this fork targets the Brazilian job market:
+  - **`gupy-search`** portal skill (`.agents/skills/gupy-search/`): Portal Gupy's public job-search
+    endpoint plus each employer's career page (`__NEXT_DATA__`), with state/UF, city, workplace
+    (remoto/híbrido/presencial), regime (CLT, PJ, estágio, trainee, aprendiz, ...) and PcD filters,
+    canonical `https://<empresa>.gupy.io/jobs/<id>` URLs for dedup, and selection steps in `detail`.
+  - **`vagas-search`** portal skill (`.agents/skills/vagas-search/`): VAGAS.com.br search pages and
+    JobPosting JSON-LD, including posted salary range, regime and benefits.
+    Both ship enabled, run with zero runtime dependencies, and have offline fixture test suites.
+  - **`tools/clt_pj.py`**: CLT x PJ calculator on 2026 tables (INSS, IRRF with the Lei 15.270/2025
+    reduction, Simples Nacional Anexos III/V with Fator R, 10% withholding on distributions above
+    R$ 50k/month), with `clt`, `pj`, `equivalente` and `comparar` commands (`tests/test_clt_pj.py`).
+  - **`10-mercado-brasileiro.md`**: hiring regimes and the regime gate, compensation package and
+    salary expectations, seniority and workplace models, currículo conventions, carta/mensagens,
+    Gupy forms, selection processes, affirmative vacancies and scam signals; wired into
+    `/apply`, `/setup`, `04`-`08`, `search-queries.md`, `CLAUDE.md` and `AGENTS.md`.
+  - `salary_lookup.py` strips Brazilian legal suffixes (Ltda, S.A., S/A, EIRELI, ME/EPP, "do Brasil").
+  - `README.md` rewritten in Portuguese for the Brazilian adaptation; the original English README moved to `README.en.md`.
+
 - **CI runs the Python suite on Windows** (`.github/workflows/ci.yml` `python-tests-windows`) - every
   job ran on Ubuntu, so a Windows-only failure reached master with all checks green: #480's test
   (an atomic rename that Windows file locking refuses) and #486's (a tool printing non-ASCII JSON

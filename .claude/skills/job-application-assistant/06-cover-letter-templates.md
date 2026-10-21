@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.2
+framework_version: 1.1.0
 ---
 
 # Cover Letter Templates and Tailoring Guide
@@ -158,7 +158,8 @@ Escape these wherever they appear in body text:
 ### Non-English Cover Letters
 - Same template structure, just write content in the posting's language
 - Adjust date format to local convention
-- Adjust closing to local convention (e.g. "Med venlig hilsen," for Danish)
+- Adjust closing to local convention (e.g. "Med venlig hilsen," for Danish, "Atenciosamente," for Brazilian Portuguese)
+- **Brazil:** a formal letter is the exception, not the rule - most Brazilian applications want a short form-field text or e-mail body instead. Check `10-mercado-brasileiro.md` §6 before producing a LaTeX letter
 
 ## Checklist Before Finalizing
 - [ ] No em-dashes (use commas or periods instead)

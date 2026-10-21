@@ -3,9 +3,10 @@ name: job-application-assistant
 description: >
   Assists with job applications: evaluating job postings, tailoring CVs, writing cover letters,
   and preparing for interviews. Triggers on keywords like: job posting, job application, CV,
-  cover letter, resume, interview prep, job fit, career, application, apply, ansøgning, stilling
+  cover letter, resume, interview prep, job fit, career, application, apply, ansøgning, stilling,
+  vaga, currículo, candidatura, carta de apresentação, entrevista, processo seletivo, CLT, PJ
 allowed-tools: Read, Glob, Grep, WebFetch, WebSearch, Edit, Write, AskUserQuestion
-framework_version: 1.3.6
+framework_version: 1.4.0
 ---
 
 # Job Application Assistant
@@ -23,6 +24,7 @@ When the user provides a job posting (URL or text), follow this workflow:
 - Analyze the posting for required competencies, keywords, and priorities
 - Research the company (website, LinkedIn, mission, recent news), per `09-web-research.md`
 - Score the posting against the candidate's profile using the framework in `04-job-evaluation.md`
+- **Brazilian postings** (or a candidate whose CLAUDE.md location is Brazil): also apply `10-mercado-brasileiro.md` - regime gate (CLT/PJ/estágio...), affirmative-vacancy rule, scam signals, and the CLT x PJ comparison via `python3 tools/clt_pj.py`
 - Present the evaluation table and verdict
 - Suggest whether the candidate should call the employer before applying (see `04-job-evaluation.md` for guidance)
 - Ask the user if they want to proceed with an application
@@ -66,6 +68,7 @@ When the user provides a job posting (URL or text), follow this workflow:
 | `07-interview-prep.md` | STAR examples, tough questions, roleplay guidelines |
 | `08-application-forms.md` | Portal free-text fields: self-introduction, project entries, character-limited pitches |
 | `09-web-research.md` | Fetching postings and company pages: trust boundary, the WebFetch 403 fallback, escalation order, claim verification |
+| `10-mercado-brasileiro.md` | Brazilian market: hiring regimes (CLT/PJ/estágio/trainee), compensation package and `tools/clt_pj.py`, currículo conventions (no CPF/photo, pt-BR headings), carta/mensagens, Gupy forms and selection steps, affirmative vacancies, scams, portals |
 
 ---
 

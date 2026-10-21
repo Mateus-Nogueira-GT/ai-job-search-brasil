@@ -8,7 +8,7 @@ The salary lookup tool (`salary_lookup.py`) lets you benchmark company salaries 
 
 ## How it works
 
-The tool reads a `salary_data.json` file in the repo root containing company salary benchmarks. It uses fuzzy matching to find companies by name, handling Danish/Nordic characters, legal suffixes (A/S, ApS), and common spelling variations.
+The tool reads a `salary_data.json` file in the repo root containing company salary benchmarks. It uses fuzzy matching to find companies by name, handling Danish/Nordic and Portuguese accented characters, legal suffixes (A/S, ApS, Ltda, S.A., S/A, EIRELI, ME/EPP, "do Brasil"), and common spelling variations. For Brazilian offers, pair it with `tools/clt_pj.py`, which converts CLT salaries and PJ invoices to a comparable annual after-tax figure.
 
 The data format supports any index-based or absolute salary data. For example:
 - Index 100 = median salary, higher is better

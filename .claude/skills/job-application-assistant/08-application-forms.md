@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.0
+framework_version: 1.1.0
 ---
 
 # Application Form Fields
@@ -17,6 +17,10 @@ Trigger it whenever a posting or portal asks for any of:
 - A short pitch under a hard character limit ("stand out in 140 characters", "why you, in one sentence")
 - Motivation questions ("why this company", "why this program")
 - Competency questions with a word cap ("describe a time you…", 200 words)
+
+## Brazilian portals
+
+Gupy and other Brazilian ATS forms add fields this file does not cover - salary expectation, start availability under aviso prévio, eliminatory yes/no questions, and optional self-declarations that only the candidate may answer. Handle them per `10-mercado-brasileiro.md` §7.
 
 ## The rule that governs everything here
 

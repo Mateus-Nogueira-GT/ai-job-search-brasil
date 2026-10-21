@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.0
+framework_version: 1.1.0
 ---
 
 # Agent Guidelines: AI Job Search
@@ -16,4 +16,6 @@ To prevent duplication and configuration drift across different AI agent framewo
    - The step-by-step instructions and triggers for tasks (setup, scrape, rank, apply, upskill, interview) are defined in the [.claude/](.claude/) directory (specifically under `.claude/skills/` and `.claude/commands/`).
    - Do not duplicate these rules or specifications. Treat `.claude/` files as the single source of truth.
 3. **Portal Search Skills:**
-   - Job-portal search CLIs live under [.agents/skills/](.agents/skills/) in the portable Agent Skills format (with a `SKILL.md` per portal). Codex and Antigravity discover these automatically; the `/scrape` workflow in [.claude/skills/job-scraper/](.claude/skills/job-scraper/) orchestrates them.
+   - Job-portal search CLIs live under [.agents/skills/](.agents/skills/) in the portable Agent Skills format (with a `SKILL.md` per portal). Codex and Antigravity discover these automatically; the `/scrape` workflow in [.claude/skills/job-scraper/](.claude/skills/job-scraper/) orchestrates them. Brazilian portals: `gupy-search` and `vagas-search`.
+4. **Brazilian market rules:**
+   - Hiring regimes (CLT/PJ/estágio), compensation, CV and selection-process conventions for Brazil are in [.claude/skills/job-application-assistant/10-mercado-brasileiro.md](.claude/skills/job-application-assistant/10-mercado-brasileiro.md); `tools/clt_pj.py` compares CLT and PJ offers.
